@@ -14,12 +14,16 @@ const addKhata = async (req, res) => {
       req.body.type = 'Gas';
     } else if (type.toLowerCase() === 'carbon') {
       req.body.type = 'Carbon';
-    } else {
+    }
+    else if (type.toLowerCase() === 'taar') {
+      req.body.type = 'Taar';
+    }
+    else {
       req.body.type = 'Unknown';
     }
     
     
-    if (!["Rubber", "Carbon", "Gas"].includes(req.body.type)) {
+    if (!["Rubber", "Carbon", "Gas" ,"Taar"].includes(req.body.type)) {
       return res.status(400).json({ message: "Invalid type. Allowed: Rubber, Carbon, Gas" });
     }
     
