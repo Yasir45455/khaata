@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const khataSchema = new mongoose.Schema(
   {
     clientId: { type: mongoose.Schema.Types.ObjectId, ref: "Client", required: true },
-    type: { type: String, enum: ["Rubber", "Carbon", "Gas"] },
+    type: { type: String, enum: ["Rubber", "Carbon", "Gas" ,"Taar"] },
     
     // Common Fields for Rubber & Carbon
     detail: { type: String },
